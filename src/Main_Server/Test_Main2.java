@@ -4,16 +4,16 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Test_Main {
+public class Test_Main2 {
     private Socket clientSocket;
     BufferedReader in;
     PrintWriter out;
 
     public static void main(String[] args) {
-        new Test_Main();
+        new Test_Main2();
     }
 
-    public Test_Main() {
+    public Test_Main2() {
         connect();
         streamSetting();
         dataSend();
@@ -22,7 +22,7 @@ public class Test_Main {
 
     public void connect() {
         try{
-            clientSocket=new Socket("yjpcpa.ddns.net",1120);
+            clientSocket=new Socket("127.0.0.1",10002);
             System.out.println("[Client] Connected to server");
         }
         catch(Exception e) {
@@ -96,3 +96,5 @@ public class Test_Main {
         }
     }
 }
+
+
